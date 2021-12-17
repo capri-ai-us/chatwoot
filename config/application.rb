@@ -28,7 +28,7 @@ module Chatwoot
 
     # Custom chatwoot configurations
     config.x = config_for(:app).with_indifferent_access
-    config.x.action_dispatch.default_headers = {
+    config.action_dispatch.default_headers = {
   'Header-Name' => 'Header-Value',
   'X-Frame-Options' => 'ALLOWALL'
 }
