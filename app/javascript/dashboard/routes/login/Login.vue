@@ -8,7 +8,7 @@
       />
       <h2 class="hero__title">
         {{
-          useInstallationName($t('LOGIN.TITLE'), globalConfig.installationName)
+          useInstallationName($t('LOGIN.TITLE'), 'Capri Chats')
         }}
       </h2>
     </div>
