@@ -2,8 +2,8 @@
   <div class="medium-12 column login">
     <div class="text-center medium-12 login__hero align-self-top">
       <img
-        :src="globalConfig.logo"
-        :alt="globalConfig.installationName"
+        src="../../../../../public/brand-assets/logo.svg"
+        alt="Capri Chats"
         class="hero__logo"
       />
       <h2 class="hero__title">
