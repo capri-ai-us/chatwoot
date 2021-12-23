@@ -10,8 +10,9 @@
       :search-key="cannedSearchTerm"
       @click="insertCannedResponse"
     />
+    <!-- Display contents from localStorage -->
     <div ref="editor">
-      {{ window.localStorage.getItem('token') }}
+      {{ window.localStorage.getItem('token') }} 
     </div>
   </div>
 </template>
