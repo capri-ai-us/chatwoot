@@ -10,7 +10,9 @@
       :search-key="cannedSearchTerm"
       @click="insertCannedResponse"
     />
-    <div ref="editor"></div>
+    <div ref="editor">
+      {{ window.localStorage.getItem('token') }}
+    </div>
   </div>
 </template>
 
