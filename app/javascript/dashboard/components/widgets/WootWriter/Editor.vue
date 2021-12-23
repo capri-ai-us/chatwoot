@@ -14,6 +14,8 @@
   </div>
 </template>
 
+// Templates End
+
 <script>
 import { EditorView } from 'prosemirror-view';
 
