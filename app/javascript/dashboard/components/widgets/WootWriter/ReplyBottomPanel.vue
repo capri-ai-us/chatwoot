@@ -186,7 +186,7 @@ export default {
     toggleEnterToSend() {
       this.$emit('toggleEnterToSend', !this.enterToSendEnabled);
     },
-    getApiResponse() {
+    getApiResponse = async() => {
       try{
         const url = 'https://jsonplaceholder.typicode.com/todos/1';
 
