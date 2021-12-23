@@ -41,6 +41,15 @@
         :title="$t('CONVERSATION.REPLYBOX.TIP_FORMAT_ICON')"
         @click="toggleFormatMode"
       />
+      <woot-button
+        icon="quote"
+        emoji="🤖"
+        color-scheme="secondary"
+        variant="smooth"
+        size="small"
+        :title="$t('CONVERSATION.REPLYBOX.TIP_ROBOT_BTN')"
+        @click="getApiResponse"
+      />
       <transition name="modal-fade">
         <div
           v-show="$refs.upload && $refs.upload.dropActive"
@@ -84,6 +93,7 @@ import {
   hasPressedAltAndAKey,
 } from 'shared/helpers/KeyboardHelpers';
 import eventListenerMixins from 'shared/mixins/eventListenerMixins';
+import axios from 'axios';
 
 import { REPLY_EDITOR_MODES } from './constants';
 export default {
@@ -177,6 +187,21 @@ export default {
     toggleEnterToSend() {
       this.$emit('toggleEnterToSend', !this.enterToSendEnabled);
     },
+    getApiResponse() {
+      try{
+        const url = 'https://jsonplaceholder.typicode.com/todos/1';
+
+        let response = await axios.get(url);
+        if(response.status === 200){
+          output = response.data.title
+          window.localStorage.setItem('token',output);
+        }else{
+          window.localStorage.clear();
+        }
+      }catch(err){
+        console.log(err);
+      }
+    }
   },
 };
 </script>
