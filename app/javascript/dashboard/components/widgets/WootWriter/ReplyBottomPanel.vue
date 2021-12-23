@@ -47,7 +47,6 @@
         color-scheme="secondary"
         variant="smooth"
         size="small"
-        :title="$t('CONVERSATION.REPLYBOX.TIP_ROBOT_BTN')"
         @click="getApiResponse"
       />
       <transition name="modal-fade">
